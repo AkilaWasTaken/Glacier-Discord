@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="2; url=https://discord.gg/Z6h2PQAZe8">
+
+    <title>Glacier — Discord</title>
+
+    <meta name="description" content="Join the Glacier Discord community.">
+    <meta name="theme-color" content="#0B111A">
+
+    <!-- Favicons -->
+    <link rel="icon" href="public/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/apple-touch-icon.png">
+
+    <style>
+        :root {
+            --background: #0B111A;
+            --surface: #151F2C;
+            --primary: #A0B4C8;
+            --secondary: #647F9C;
+            --border: #25374D;
+            --text: #E2E8F0;
+            --muted: #94A3B8;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: grid;
+            place-items: center;
+            background: var(--background);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont,
+                "Segoe UI", sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        main {
+            width: 100%;
+            max-width: 440px;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .logo {
+            display: block;
+            width: 112px;
+            height: 112px;
+            object-fit: contain;
+            margin: 0 auto 28px;
+            user-select: none;
+        }
+
+        .loader {
+            width: 24px;
+            height: 24px;
+            margin: 0 auto 20px;
+            border: 2px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        h1 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -0.6px;
+        }
+
+        p {
+            margin: 0 0 24px;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 11px 18px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 150ms, border-color 150ms;
+        }
+
+        a:hover {
+            background: var(--surface);
+            border-color: var(--secondary);
+        }
+
+        a:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 4px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .loader {
+                animation: none;
+            }
+
+            a {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <img
+            class="logo"
+            src="public/logo.png"
+            alt="Glacier"
+            width="112"
+            height="112"
+            draggable="false"
+        >
+
+        <div class="loader" aria-hidden="true"></div>
+
+        <h1>Redirecting to Discord</h1>
+
+        <p>You will be redirected automatically.</p>
+
+        <a href="https://discord.gg/Z6h2PQAZe8">
+            Continue to Discord
+            <span aria-hidden="true">&#8599;</span>
+        </a>
+    </main>
+</body>
+</html>
