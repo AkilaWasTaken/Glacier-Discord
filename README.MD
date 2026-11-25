@@ -8,7 +8,7 @@
 <p align="center">
   A simple redirect page for the Glacier community.
   <br />
-  <a href="https://discord.gg/Z6h2PQAZe8"><strong>Join our Discord</strong></a>
+  <a href="https://discord.glacierlabs.dev"><strong>Join our Discord</strong></a>
 </p>
 
 <p align="center">
