@@ -1,202 +1,110 @@
 
-
 <p align="center">
-
-&#x20; <img src="public/logo.png" alt="Glacier" width="140" />
-
+  <img src="./public/logo.png" alt="Glacier" width="120" />
 </p>
-
-
 
 <h1 align="center">Glacier</h1>
 
-
-
 <p align="center">
-
-&#x20; A simple redirect page for the Glacier community.<br />
-
-&#x20; <a href="https://discord.gg/Z6h2PQAZe8"><strong>Join our Discord</strong></a>
-
+  A simple redirect page for the Glacier community.
+  <br />
+  <a href="https://discord.gg/Z6h2PQAZe8"><strong>Join our Discord</strong></a>
 </p>
 
-
-
 <p align="center">
-
-&#x20; <img src="https://img.shields.io/badge/HTML5-A0B4C8?logo=html5\&logoColor=white" alt="HTML5" />
-
-&#x20; <img src="https://img.shields.io/badge/CSS3-647F9C?logo=css\&logoColor=white" alt="CSS3" />
-
-&#x20; <img src="https://img.shields.io/badge/License-MIT-25374D" alt="MIT License" />
-
+  <img src="https://img.shields.io/badge/HTML5-A0B4C8?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-647F9C?style=flat-square&logo=css&logoColor=white" alt="CSS3" />
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-25374D?style=flat-square" alt="MIT License" /></a>
 </p>
 
+---
 
-
-\---
-
-
-
-\## Getting started
-
-
+## Getting started
 
 Clone or download the repository and open `index.html` in your browser.
 
-
-
-Alternatively, run a local HTTP server using Python:
-
-
+You can also run a local HTTP server using Python:
 
 ```bash
-
 python -m http.server 8080
-
 ```
 
-
-
-The page will be available at `http://localhost:8080`.
-
-
+Open [localhost:8080](http://localhost:8080) to preview the page.
 
 No dependencies or build process required.
 
+## Configuration
 
+All settings are located in `index.html`.
 
-\## Configuration
+### Redirect URL
 
-
-
-All configuration is handled directly in `index.html`.
-
-
-
-\### Redirect URL
-
-
-
-Update the Discord invite in both the meta refresh tag and the fallback link.
-
-
+Replace the Discord invite in both the meta refresh tag and the fallback link.
 
 ```html
-
-<meta http-equiv="refresh" content="2; url=https://discord.gg/YOUR\_INVITE">
-
+<meta http-equiv="refresh" content="2; url=https://discord.gg/YOUR_INVITE">
 ```
 
-
-
 ```html
-
-<a href="https://discord.gg/YOUR\_INVITE">
-
-&#x20;   Continue to Discord
-
+<a href="https://discord.gg/YOUR_INVITE">
+    Continue to Discord
 </a>
-
 ```
 
+### Redirect delay
 
-
-\### Redirect delay
-
-
-
-The first value in the `content` attribute defines how long the page waits before redirecting.
-
-
+Change the first value in the meta refresh `content` attribute.
 
 | Value | Behavior |
-
-| ----- | -------- |
-
+| :--- | :--- |
 | `0` | Instant redirect |
-
 | `2` | Redirect after 2 seconds (default) |
-
 | `5` | Redirect after 5 seconds |
 
+### Appearance
 
+The color palette is defined in the `:root` section of the stylesheet.
 
-\### Appearance
+| Variable | Default |
+| :--- | :--- |
+| `--background` | `#0B111A` |
+| `--surface` | `#151F2C` |
+| `--primary` | `#A0B4C8` |
+| `--secondary` | `#647F9C` |
+| `--border` | `#25374D` |
+| `--text` | `#E2E8F0` |
+| `--muted` | `#94A3B8` |
 
+The logo and browser icons can be replaced in the `public/` directory.
 
+## Project structure
 
-Colors are defined as CSS variables in the `:root` section of the stylesheet.
-
-
-
-```css
-
-:root {
-
-&#x20;   --background: #0B111A;
-
-&#x20;   --surface: #151F2C;
-
-&#x20;   --primary: #A0B4C8;
-
-&#x20;   --secondary: #647F9C;
-
-&#x20;   --border: #25374D;
-
-&#x20;   --text: #E2E8F0;
-
-&#x20;   --muted: #94A3B8;
-
-}
-
-```
-
-
-
-Edit these values to customize the page without changing the layout.
-
-
-
-\## Project structure
-
-
-
-```
-
-Glacier/
-
+```text
+.
 ├── public/
-
-│   └── logo.png
-
+│   ├── logo.png
+│   ├── favicon.ico
+│   ├── favicon-16x16.png
+│   ├── favicon-32x32.png
+│   └── apple-touch-icon.png
 ├── index.html
-
 ├── README.md
-
 └── LICENSE
-
 ```
 
+## Deployment
 
+Deploy the repository using any static hosting provider.
 
-\## Deployment
+| Provider | Configuration |
+| :--- | :--- |
+| GitHub Pages | Deploy from the repository root |
+| Vercel | Framework preset: Other |
+| Cloudflare Pages | No build command |
+| Nginx / Apache | Copy files to the web root |
 
+No environment variables or build commands are required.
 
+## License
 
-The page can be hosted on any static hosting service, including GitHub Pages, Vercel, Cloudflare Pages, or a regular web server.
-
-
-
-Deploy the repository as a static website with `index.html` in the root directory. No build commands or environment variables are required.
-
-
-
-\## License
-
-
-
-Licensed under the \[MIT License](LICENSE).
-
-
-
+Licensed under the [MIT License](./LICENSE).
